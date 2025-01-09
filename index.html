@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Example</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+    <h1>Search Books</h1>
+
+    <!-- Input Field for Search -->
+    <label for="search">Search:</label>
+    <input type="text" id="search" name="search" 
+           hx-get="/search" 
+           hx-trigger="keyup changed delay:300ms" 
+           hx-target="#results" 
+           placeholder="Type a book name...">
+    
+    <!-- Area to Display Results -->
+    <div id="results">
+        <p>Search results will appear here...</p>
+    </div>
+</body>
+</html>
